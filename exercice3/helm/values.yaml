@@ -1,0 +1,11 @@
+replicaCount: 1
+image:
+  repository: codeworksio/streaming-server
+  pullPolicy: Always
+  tag: "latest"
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80

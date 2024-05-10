@@ -1,0 +1,5 @@
+apiVersion: v2
+name: streaming-server
+description: A robust way of streaming media content live using the NGINX web server and its RTMP module
+type: application
+version: 0.1.0

@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: streaming-server
+  labels:
+    app: streaming_server
+    chart: {{.Chart.Name}}-{{.Chart.Version}}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: streaming-server
+  template:
+    metadata:
+      labels:
+        app: streaming-server
+    spec:
+      containers:
+        - name: streaming-server
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          resources:
+            limits:
+              memory: 700Mi
+            requests:
+              memory: 700Mi
+          ports:
+            - name: port1
+              containerPort: 1935
+              protocol: TCP
+            - name: port2
+              containerPort: 8080
+              protocol: TCP
+            - name: port3
+              containerPort: 8443
+              protocol: TCP
