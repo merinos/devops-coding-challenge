@@ -1,4 +1,6 @@
-# README
+# Exercice3
+
+Implement kubernetes deployment for https://github.com/codeworksio/docker-streaming-server
 
 ## Requirements
 

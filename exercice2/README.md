@@ -1,4 +1,6 @@
-# README
+# Exercice2
+
+Use any IaC tool of your choice (ansible/Terraform/Python etc) and deploy https://github.com/scotch-io/node-todo on aws or gcp or azure
 
 ## Dependencies
 
@@ -31,7 +33,8 @@ $ terraform apply
  * Using private subnet
  * Increase ASG size
  * Backups
- * Deploy Mongo on saas
+ * Deploy Mongo correctly (on SaaS or a dedicated instances)
+ * fixed dependencies (at least critical CVE...)
 
 ## Other options
 
@@ -41,7 +44,7 @@ Pros
 
  * easier if you have already an orchestrator (K8s,Nomad,...)
  * more common
- * little better isolation
+ * better isolation
  * scale up is faster
  * easier to plug monitoring and logging
  
