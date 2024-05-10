@@ -1,0 +1,10 @@
+[Unit]
+Description=A Node app built with MongoDB and Angular
+After=network.target mongod.service
+
+[Service]
+WorkingDirectory=/opt/node-todo
+ExecStart=/usr/bin/node server.js
+
+[Install]
+WantedBy=multi-user.target
